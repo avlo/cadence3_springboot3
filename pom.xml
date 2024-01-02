@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.mayo.lpea.cad.cadence3</groupId>
+  <artifactId>parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>cadence3-parent</name>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>lib/h2db</module>
+    <module>lib/core</module>
+    <module>lib/web</module>
+    <module>lib/jpa</module>
+    <module>lib/ldap</module>
+    <module>lib/azure</module>
+
+    <module>autoconfigure/h2db</module>
+    <module>autoconfigure/core</module>
+    <module>autoconfigure/web</module>
+    <module>autoconfigure/jpa</module>
+    <module>autoconfigure/ldap</module>
+    <module>autoconfigure/azure</module>
+
+    <module>starter/h2db</module>
+    <module>starter/core</module>
+    <module>starter/web</module>
+    <module>starter/jpa</module>
+    <module>starter/ldap</module>
+    <module>starter/azure</module>
+
+<!--    <module>sample-apps/h2db</module>-->
+<!--    <module>sample-apps/core</module>-->
+<!--    <module>sample-apps/web</module>-->
+    <module>sample-apps/jpa</module>
+    <module>sample-apps/ldap</module>
+    <module>sample-apps/azure</module>
+  </modules>
+
+  <properties>
+    <java.version>17</java.version>
+    <spring-boot.version>3.2.1</spring-boot.version>
+    <spring-security-ldap.version>6.2.1</spring-security-ldap.version>
+    <!--        <azure-spring-cloud.version>6.0.0-beta.4</azure-spring-cloud.version>-->
+    <azure-spring-cloud.version>5.8.0</azure-spring-cloud.version>
+    <maven-compiler-plugin.version>3.12.0</maven-compiler-plugin.version>
+    <lombok.version>1.18.28</lombok.version>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
