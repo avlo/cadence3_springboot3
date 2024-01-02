@@ -54,7 +54,7 @@ All above available as spring-boot-starters for rapidly accelerated customizable
 - `starter`:  
   powerful spring-boot3 rapid-development packaging feature (for client-application developers/users)  
 
-#### Cadence3 is a dynamic and easily extensible OOP project == Additional/new features can be introduced quickly and easily as desired _without compromising or breaking existing security model/functionality_.
+#### Cadence3 is a dynamic and easily extensible OOP project.  Additional/new features can be introduced quickly and easily as desired _without compromising or breaking existing security model/functionality_.
 
 <hr style="border:2px solid gray">  
 
