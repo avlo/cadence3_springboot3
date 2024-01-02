@@ -42,14 +42,7 @@ public class AzureSecurityConfig {
 
 	@Bean
 	public AadWebApplicationHttpSecurityConfigurer aadWebApplicationHttpSecurityConfigurer(HttpSecurity http) {
-		AadWebApplicationHttpSecurityConfigurer a = AadWebApplicationHttpSecurityConfigurer.aadWebApplication();
-//		TODO: revisit upon @Autoconfiguration
-//		http.securityMatcher(PathRequest.toH2Console())
-//				.authorizeHttpRequests(auth -> auth
-//						.requestMatchers(PathRequest.toH2Console()).permitAll());
-//		http.build();
-//		a.configure(http);
-		return a;
+		return AadWebApplicationHttpSecurityConfigurer.aadWebApplication();
 	}
 
 	@Bean

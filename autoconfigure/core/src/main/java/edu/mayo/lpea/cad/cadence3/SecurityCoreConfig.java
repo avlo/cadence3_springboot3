@@ -23,7 +23,6 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 @ConditionalOnBean(CustomizableAppUserService.class)
 @EnableJpaRepositories(basePackages = "edu.mayo.lpea.cad.cadence3.security.repository")
-//@EnableJpaRepositories
 // TODO: below should not be required
 @EntityScan(basePackages = "edu.mayo.lpea.cad.cadence3.security.entity")
 public class SecurityCoreConfig {
@@ -42,20 +41,18 @@ public class SecurityCoreConfig {
 	}
 
 	@Bean
-//	@ConditionalOnMissingBean(name = {"azureAuthUserDetailsService"}) // check for azure variation
 	@ConditionalOnMissingBean
 	public AuthUserDetailsService authUserDetailsService(DataSource dataSource, PasswordEncoder passwordEncoder) {
 		return new AuthUserDetailServiceImpl(dataSource, passwordEncoder);
 	}
 
 	@Bean
-//	@ConditionalOnMissingBean(name = {"azureAuthUserService"}) // check for azure variation
 	@ConditionalOnMissingBean
 	public AuthUserService authUserService(
-			CustomizableAppUserService customizableAppUserService,
-			AuthUserDetailsService authUserDetailService,
-			AppUserService appUserService,
-			AppUserAuthUserRepository appUserAuthUserRepository) {
+		CustomizableAppUserService customizableAppUserService,
+		AuthUserDetailsService authUserDetailService,
+		AppUserService appUserService,
+		AppUserAuthUserRepository appUserAuthUserRepository) {
 		return new AuthUserServiceImpl(customizableAppUserService, authUserDetailService, appUserService, appUserAuthUserRepository);
 	}
 
