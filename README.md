@@ -4,7 +4,7 @@
 
   - Stand-alone user creation/registration & <abbr title="both Authentication & Authorization using Spring-Security UserDetails & UserDetailsService">Spring-Security Authentication & Authorization</abbr> (**_Default_** mode)
   - LDAP user Authentication and <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService">Authorization</abbr> (**_LDAP_** mode)
-  - AAD (Azure Active Directory) user + Oauth2/JWT client-application <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService atop Azure Active Directory">Authentication</abbr> and Spring Security <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService">Authorization</abbr> (**_Azure_** mode).
+  - SSO (Single Sign-On) <abbr title="Azure Active Directory">AAD</abbr> user + Oauth2/JWT client-application <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService atop Azure Active Directory">Authentication</abbr> and Spring Security <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService">Authorization</abbr> (**_Azure_** mode).
   
 All above available as spring-boot-starters for rapidly accelerated customizable **_and secure_** projects.
 
