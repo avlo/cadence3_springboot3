@@ -9,3 +9,4 @@ MM.         ,pm9MM 8MI    MM 8M""""""  MM    MM 8M       8M""""""      ,89      
   `"bmmmd' `Moo9^Yo.`Wbmd"MML.`Mbmmd'.JMML  JMML.YMbmd'   `Mbmmd'       88     .AMA.   .AMMA.AMMmmmM   `Mbod"YML..JMML.   `Mbmmd'
                                                                   (O)  .M'
                                                                    bmmmd'
+Cadence3 ${application.formatted-version}  -  SpringBoot ${spring-boot.formatted-version}
