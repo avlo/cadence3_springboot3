@@ -1,4 +1,4 @@
-#### <abbr title="Azure Active Directory Single-Sign-On">AzureAD SSO</abbr> sample application
+## <abbr title="Azure Active Directory Single-Sign-On">AzureAD SSO</abbr> sample application
 
 &nbsp;&nbsp;&nbsp;&nbsp; _Activates AzureAD SSO (Active Directory Oauth2 + JWT) user authentication + spring-security authorization_
 
@@ -27,7 +27,7 @@ Substitute below attributes in _**sample-apps/azure/src/main/resources/applicati
     #              - https://graph.microsoft.com/Analytics.Read
                   - email~/git/Cadence3_SpringBoot3$
 
-then, from `sample-apps/azure/` directory, run:
+then:
 
 	sample-apps/azure$ mvn spring-boot:run
   
