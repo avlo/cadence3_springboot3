@@ -70,11 +70,12 @@ public class AzureSecurityConfig {
 			.oauth2Login(oauth2 -> oauth2
 				.userInfoEndpoint(userinfo -> userinfo
 					.oidcUserService(azureAuthUserServiceImpl))
-				.defaultSuccessUrl("/users")
+				.defaultSuccessUrl("/users", true)
 				.permitAll()
 			)
 			.logout(logout -> logout
 				.logoutRequestMatcher(mvc.pattern("/logout")).permitAll()
+				.logoutSuccessUrl("/login")
 			);
 		return http.build();
 	}
