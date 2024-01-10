@@ -1,8 +1,8 @@
 # Cadence3 - User Authentication/Authorization and Application Security framework.
 
- Spring Boot 3.x + Spring Security 6.x User-Session management and Comprehensive Web-Application security, _**built-in and transparent to application-developer concerns**_, with pluggable modes:
+ Spring Boot 3.x + Spring Security 6.x User-Session management and Comprehensive Web-Application security, _**built-in and transparent to both application/business logic and application developer concerns**_, with pluggable security module options:
 
-  - Stand-alone user creation/registration & <abbr title="both Authentication & Authorization using Spring-Security UserDetails & UserDetailsService">Spring-Security Authentication & Authorization</abbr> (**_Default_** mode)
+  - Stand-alone user creation/registration & <abbr title="both Authentication & Authorization using Spring-Security UserDetails & UserDetailsService">Spring-Security Authentication & Authorization</abbr> (**_Standalone_** mode)
   - LDAP user Authentication and <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService">Authorization</abbr> (**_LDAP_** mode)
   - SSO (Single Sign-On) <abbr title="Azure Active Directory">AAD</abbr> user + Oauth2/JWT client-application <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService atop Azure Active Directory">Authentication</abbr> and Spring Security <abbr title="Authorization using Spring-Security UserDetails & UserDetailsService">Authorization</abbr> (**_Azure_** mode).
   
