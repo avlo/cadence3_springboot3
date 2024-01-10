@@ -2,7 +2,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp; _Activates AzureAD SSO (Active Directory Oauth2 + JWT) user authentication + spring-security authorization_
 
-Substitute below attributes in _**sample-apps/azure/src/main/resources/application.yml**_
+Substitute below <span style="color:red">(red)</span> attributes in _**sample-apps/azure/src/main/resources/application.yml**_
 ```yml
     spring:
       thymeleaf:
