@@ -81,15 +81,11 @@ From project root directory:
 
 	$ mvn clean install
 
-## Setup, Run
+<hr style="border:2px solid gray">  
 
-#### <abbr title="Self-contained user authentication and authorization using JPA/Hibernate">Default</abbr> mode
-&nbsp;&nbsp;&nbsp;&nbsp; _Activates canonical spring-security user mode + spring-security authentication **and** authorization_   
+## Configure & Run
 
-Works by default.  No configuration necessary.  
-
-	$ cd sample-apps/jpa/
-	/sample-apps/jpa$  mvn spring-boot:run
+[Standalone Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?path=/sample-apps/jpa&version=GBmaster)
 
 [LDAP Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/ldap)
 
@@ -97,25 +93,7 @@ Works by default.  No configuration necessary.
 
 <hr style="border:2px solid gray">  
 
-## Application Use
-### Default mode.  Stand-alone JPA authentication & authorization)
-
-Register new application user:
-
-    localhost:8080/register
-    
-Login & Authenticate user:
-
-    localhost:8080/login
-
-Authenticated and Authorized endpoint displaying existing application users
-
-    localhost:8080/users
-  
-  
-----
-
-DB console:
+## DB console: ##
 
     localhost:8080/h2-console/
 
