@@ -90,19 +90,8 @@ Works by default.  No configuration necessary.
 
 	$ cd sample-apps/jpa/
 	/sample-apps/jpa$  mvn spring-boot:run
-    
 
-#### LDAP mode
-&nbsp;&nbsp;&nbsp;&nbsp;_activates LDAP authentication + spring-security authorization_  
-
-Substitute password for work-account (in this case, TU01088) in _**sample-apps/ldap/src/main/resources/application.properties**_ and _**src/test/resources/application-test.properties**_
-
-    spring.ldap.username=CN=TU01088,OU=Normal,OU=WorkAccounts,DC=mfad,DC=mfroot,DC=org
-    spring.ldap.password=<TU01088_PASSWORD>
-then:
-
-	$ cd sample-apps/ldap/
-	/sample-apps/ldap$  mvn spring-boot:run  
+[LDAP Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/ldap)
 
 [AzureAD Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/azure)
 
@@ -125,16 +114,6 @@ Authenticated and Authorized endpoint displaying existing application users
   
   
 ----
-
-### LDAP mode
-    
-Login & Authenticate LDAP user:
-
-    localhost:8080/login
-
-Authenticated and Authorized endpoint displaying existing application users
-
-    localhost:8080/users
 
 DB console:
 
