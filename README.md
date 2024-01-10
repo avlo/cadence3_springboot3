@@ -102,43 +102,9 @@ Substitute password for work-account (in this case, TU01088) in _**sample-apps/l
 then:
 
 	$ cd sample-apps/ldap/
-	/sample-apps/ldap$  mvn spring-boot:run
+	/sample-apps/ldap$  mvn spring-boot:run  
 
-#### <abbr title="Active Directory OAuth2">ADOauth2</abbr> mode
-
-&nbsp;&nbsp;&nbsp;&nbsp; _Activates ADOauth2 (Active Directory Oauth2 + JWT) user authentication mode + spring-security authorization_,
-&nbsp;&nbsp;&nbsp;&nbsp; _aka, Single-Sign-On (SSO)_
-
-Substitute below attributes in _**sample-apps/azure/src/main/resources/application.yml**_ and _**src/test/resources/application-test.properties**_
-
-    spring:
-      thymeleaf:
-        cache: false
-      cloud:
-        azure:
-          active-directory:
-            enabled: true
-            profile:
-              tenant-id: <TENANT_ID>
-    #          environment:
-    #            active-directory-endpoint:
-    #            microsoft-graph-endpoint:
-            credential:
-              client-id: <CLIENT_ID>
-              client-secret: <CLIENT_SECRET_VALUE, not CLIENT-SECRET>
-            authorization-clients:
-              aad:
-    #            authorization-grant-type: client_credentials
-                scopes:
-                  - openid
-    #              - https://graph.microsoft.com/Analytics.Read
-                  - email~/git/Cadence3_SpringBoot3$
-
-then:
-
-	$ cd sample-apps/azure/
-	/sample-apps/azure$  mvn spring-boot:run
-  
+[AzureAD Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/azure)
 
 <hr style="border:2px solid gray">  
 
@@ -169,22 +135,6 @@ Login & Authenticate LDAP user:
 Authenticated and Authorized endpoint displaying existing application users
 
     localhost:8080/users
-
-----
-  
-### ADOauth2 mode
-    
-Login & Authenticate ADOauth2 user:
-
-    localhost:8080/login
-
-Authenticated and Authorized endpoint displaying existing application users
-
-    localhost:8080/users
-
-<hr style="border:2px solid gray">  
-
-## Viewing DB contents
 
 DB console:
 
