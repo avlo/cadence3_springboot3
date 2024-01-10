@@ -3,7 +3,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp; _Activates AzureAD SSO (Active Directory Oauth2 + JWT) user authentication + spring-security authorization_
 
 Substitute below attributes in _**sample-apps/azure/src/main/resources/application.yml**_
-
+```yml
     spring:
       thymeleaf:
         cache: false
@@ -26,7 +26,7 @@ Substitute below attributes in _**sample-apps/azure/src/main/resources/applicati
                   - openid
     #              - https://graph.microsoft.com/Analytics.Read
                   - email~/git/Cadence3_SpringBoot3$
-
+```
 then:
 
 	sample-apps/azure$ mvn spring-boot:run
