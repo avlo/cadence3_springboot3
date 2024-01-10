@@ -45,3 +45,7 @@ Authenticated and Authorized endpoint displaying existing application users
     localhost:8080/users
 
 <hr style="border:2px solid gray">  
+
+## AzureAD Spring-Boot Starter Tutorial
+
+[cadence3-azure-spring-boot-starter](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?path=/sample-apps/azure/TUTORIAL.md&version=GBmaster)  
