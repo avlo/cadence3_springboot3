@@ -83,13 +83,13 @@ From project root directory:
 
 <hr style="border:2px solid gray">  
 
-## Configure & Run
+## Configure & Run Sample Applications
 
-[Standalone Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?path=/sample-apps/jpa&version=GBmaster)
+[Standalone](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?path=/sample-apps/jpa&version=GBmaster)
 
-[LDAP Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/ldap)
+[LDAP](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/ldap)
 
-[AzureAD Sample Application](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/azure)
+[AzureAD](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/azure)  
 
 <hr style="border:2px solid gray">  
 
