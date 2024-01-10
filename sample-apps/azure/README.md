@@ -25,11 +25,13 @@ Substitute below attributes in _**sample-apps/azure/src/main/resources/applicati
                 scopes:
                   - openid
     #              - https://graph.microsoft.com/Analytics.Read
-                  - email~/git/Cadence3_SpringBoot3$
+                  - email  
+
 ```
 then:
 
-	sample-apps/azure$ mvn spring-boot:run
+	$ cd sample-apps/azure/
+	/sample-apps/azure$ mvn spring-boot:run
   
 
 <hr style="border:2px solid gray">  
