@@ -1,4 +1,4 @@
-#### <abbr title="Self-contained user authentication and authorization using JPA/Hibernate">Default</abbr> mode
+## <abbr title="Self-contained user authentication and authorization using JPA/Hibernate">Standalone</abbr> mode
 &nbsp;&nbsp;&nbsp;&nbsp; _Activates canonical spring-security user mode + spring-security authentication **and** authorization_   
 
 Works by default.  No configuration necessary.  
