@@ -2,8 +2,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp; _Activates AzureAD SSO (Active Directory Oauth2 + JWT) user authentication + spring-security authorization_
 
-Substitute below attributes in _**sample-apps/azure/src/main/resources/application.yml**_
-
+Substitute below <span style="color:red">(red)</span> attributes in _**sample-apps/azure/src/main/resources/application.yml**_
+```yml
     spring:
       thymeleaf:
         cache: false
@@ -25,11 +25,13 @@ Substitute below attributes in _**sample-apps/azure/src/main/resources/applicati
                 scopes:
                   - openid
     #              - https://graph.microsoft.com/Analytics.Read
-                  - email~/git/Cadence3_SpringBoot3$
+                  - email  
 
+```
 then:
 
-	sample-apps/azure$ mvn spring-boot:run
+	$ cd sample-apps/azure/
+	/sample-apps/azure$ mvn spring-boot:run
   
 
 <hr style="border:2px solid gray">  
@@ -45,3 +47,7 @@ Authenticated and Authorized endpoint displaying existing application users
     localhost:8080/users
 
 <hr style="border:2px solid gray">  
+
+## AzureAD Spring-Boot Starter Tutorial
+
+[cadence3-azure-spring-boot-starter](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?path=/sample-apps/azure/TUTORIAL.md&version=GBmaster)  
