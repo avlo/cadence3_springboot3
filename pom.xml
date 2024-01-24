@@ -83,6 +83,21 @@
         <version>${spring-boot.version}</version>
       </dependency>
       <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-starter-active-directory</artifactId>
+        <version>${azure-spring-cloud.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        <version>${spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-ldap</artifactId>
+        <version>${spring-security-ldap.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-thymeleaf</artifactId>
         <version>${spring-boot.version}</version>

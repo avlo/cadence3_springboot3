@@ -22,7 +22,6 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-ldap</artifactId>
-      <version>${spring-security-ldap.version}</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
