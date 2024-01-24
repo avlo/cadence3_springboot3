@@ -42,6 +42,7 @@
   <properties>
     <java.version>17</java.version>
     <spring-boot.version>3.2.1</spring-boot.version>
+    <thymeleaf-extras-springsecurity6.version>3.1.2.RELEASE</thymeleaf-extras-springsecurity6.version>
     <spring-security-ldap.version>6.2.1</spring-security-ldap.version>
     <!--        <azure-spring-cloud.version>6.0.0-beta.4</azure-spring-cloud.version>-->
     <azure-spring-cloud.version>5.8.0</azure-spring-cloud.version>
@@ -53,6 +54,11 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.thymeleaf.extras</groupId>
+        <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+        <version>${thymeleaf-extras-springsecurity6.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
