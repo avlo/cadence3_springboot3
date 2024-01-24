@@ -26,6 +26,11 @@ public class EditAzureUserController {
 		this.exampleAzureUserService = exampleAzureUserService;
 	}
 
+	@GetMapping("/")
+	public String successfulLoginRedirect() {
+		return "redirect:/users";
+	}
+
 	@Secured({ "ROLE_ANONYMOUS", "ANONYMOUS","ROLE_USER", "USER"})
 	@GetMapping("/edit/{id}")
 	public String showEditForm(Model model, @PathVariable("id") Long id)
