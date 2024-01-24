@@ -18,7 +18,8 @@ import java.text.MessageFormat;
 public class AuthUserDetailServiceImpl extends JdbcUserDetailsManager implements AuthUserDetailsService {
   private static final Logger NON_CLASHING_LOGGER = LoggerFactory.getLogger(AuthUserDetailServiceImpl.class);
   private final PasswordEncoder passwordEncoder;
-  private static final String CANONICAL_ROLE = "USER";
+  private static final String JSP_ROLE = "USER";
+  private static final String AZURE_ROLE = "ACTIVE";
 
   public AuthUserDetailServiceImpl(DataSource dataSource, PasswordEncoder passwordEncoder) {
     super(dataSource);
@@ -29,7 +30,7 @@ public class AuthUserDetailServiceImpl extends JdbcUserDetailsManager implements
   @Transactional
   @Override
   public AuthUserDetails createAuthUser(String username, String password) throws PreExistingUserException {
-    createUser(new AuthUserDetailsImpl(createAuthUser(username, password, CANONICAL_ROLE)));
+    createUser(new AuthUserDetailsImpl(createAuthUser(username, password, JSP_ROLE)));
     return loadUserByUsername(username);
   }
 
