@@ -78,6 +78,7 @@ a spring boot `@Configuration` annotated file ([example above, ExampleAzureUserC
     @EnableJpaRepositories(basePackageClasses = {<YOUR_CUSTOM_USER_CLASS>Repository.class})  
     @EntityScan(basePackageClasses = {<YOUR_CUSTOM_USER_CLASS>.class})  
     @PropertySource("classpath:application.yml")  
+    @ComponentScan(basePackages = "edu.mayo.lpea.cad.cadence3.*")
 ```
   - `@Bean` definition:  
 ```
