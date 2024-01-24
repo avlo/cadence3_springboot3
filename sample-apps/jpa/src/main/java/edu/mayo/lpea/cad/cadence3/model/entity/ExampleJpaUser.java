@@ -5,6 +5,10 @@ import edu.mayo.lpea.cad.cadence3.security.entity.AppUser;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
+
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +23,9 @@ import org.apache.commons.beanutils.BeanUtils;
 @Entity
 public class ExampleJpaUser extends AppUser {
   private String customUserField;
+
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date customDate;
 
   @Override
   public ExampleJpaUser getInstantiatedCustomAppUserType() {

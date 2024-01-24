@@ -16,6 +16,10 @@
       <label>Custom ExampleUser Attribute</label>
       <input type="text" id="customUserField" placeholder="Custom User Attribute" name="customUserField" th:value="${user.customUserField}">
     </p>
+    <p>
+      <label>Custom ExampleUser Date</label>
+      <input type="text" id="customDate" placeholder="Date" name="customDate" th:value="${user.customDate}">
+    </p>
     <input type="hidden" id="id" name="id" th:value="${user.id}"/>
     <input type="submit" value="Save">
   </form>
