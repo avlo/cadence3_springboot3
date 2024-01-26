@@ -13,7 +13,7 @@ public class AuthController implements ErrorController {
   @Secured({ "ROLE_ANONYMOUS", "ANONYMOUS","ROLE_USER", "USER"})
   @GetMapping("/login")
   public String login() {
-    return "login";
+    return "thymeleaf/login";
   }
 
   /**
