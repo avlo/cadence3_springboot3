@@ -11,20 +11,20 @@
           |           `-- lpea
           |               `-- cad
           |                   `-- cadence3
-          |                       |-- Cadence3AzureUserDemo.java
+          |                       |-- Cadence3AzureUserDemo.java                   <--- 1
           |                       |-- config
-          |                       |   `-- ExampleAzureUserConfig.java
+          |                       |   `-- ExampleAzureUserConfig.java              <--- 2
           |                       |-- model
           |                       |   `-- entity
-          |                       |       `-- ExampleAzureUser.java
+          |                       |       `-- ExampleAzureUser.java                <--- 3
           |                       |-- repository
-          |                       |   `-- ExampleAzureUserRepository.java
+          |                       |   `-- ExampleAzureUserRepository.java          <--- 4
           `-- resources
-              |-- application.yml
+              |-- application.yml                                                  <--- 5
 ```
 <hr style="border:2px solid gray">  
 
-## Per above 5 components requiring provision:
+## Per 5 components shown above, each requiring provision:
 ----
 a custom user class ([example above, ExampleAzureUser.java](https://dev.azure.com/mclm/GBS%20CAD/_git/Cadence3_SpringBoot3?version=GBmaster&path=/sample-apps/azure/src/main/java/edu/mayo/lpea/cad/cadence3/model/entity/ExampleAzureUser.java)), containing:
   - `extends AppUser`  
@@ -34,7 +34,7 @@ a custom user class ([example above, ExampleAzureUser.java](https://dev.azure.co
   - annotations  
     `@Embeddable`  
     `@Entity`  
-  - all fields which you'd like your user object to have  
+  - any/all fields which you'd like your user object to have  
 
 ----
 
@@ -84,15 +84,14 @@ a spring boot `@Configuration` annotated file ([example above, ExampleAzureUserC
 ```
     public CustomizableAppUserService customizableAppUserService()  
 ```
+
+----  
+  
+after implementing the above, all remaining/application logic can be implemented per developer/application needs.  
+
 <hr style="border:2px solid gray">  
 
-Additional, Under Construction  
-
-<img src="https://dev.azure.com/mclm/e7c85e5b-8c26-4875-96ef-57032bd1e896/_apis/git/repositories/de4257d9-2244-4390-89b5-90fa19fd0521/items?path=/sample-apps/azure/UnderConstruction.png&versionDescriptor[versionOptions]=0&versionDescriptor[versionType]=0&versionDescriptor[version]=master&resolveLfs=true&%24format=octetStream&api-version=5.0" alt="Under Construction" title="Under Construction">
-
-all above classes can have any additional user-related logic as you'd like
-
-demo extra's:
+coming soon:demo extra's:
 
   CustomController  
   CustomService  
