@@ -53,13 +53,13 @@ spring:
         active-directory:
           enabled: true
           profile:
-            tenant-id: <TENANT_ID>
+            tenant-id: <TENANT_ID>                                      <----
 #          environment:
 #            active-directory-endpoint:
 #            microsoft-graph-endpoint:
           credential:
-            client-id: <CLIENT_ID>
-            client-secret: <CLIENT_SECRET_VALUE, not CLIENT-SECRET>
+            client-id: <CLIENT_ID>                                      <----
+            client-secret: <CLIENT_SECRET_VALUE, not CLIENT-SECRET>     <----
           authorization-clients:
             aad:
 #            authorization-grant-type: client_credentials
