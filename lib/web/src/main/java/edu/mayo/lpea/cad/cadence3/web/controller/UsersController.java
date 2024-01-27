@@ -35,6 +35,6 @@ public class UsersController {
     LOGGER.info("Fetched users: {}", users);
     model.addAttribute("environmentlabel", environmentLabel);
     model.addAttribute("users", users);
-    return "users";
+    return "thymeleaf/users";
   }
 }

@@ -31,12 +31,17 @@ public class EditAzureUserController {
 		return "redirect:/users";
 	}
 
+	@GetMapping("/welcome")
+	public String welcome(Model model) {
+		return "jsp/welcome";
+	}
+
 	@Secured({ "ROLE_ANONYMOUS", "ANONYMOUS","ROLE_USER", "USER"})
 	@GetMapping("/edit/{id}")
 	public String showEditForm(Model model, @PathVariable("id") Long id)
 			throws InvocationTargetException, IllegalAccessException {
 		model.addAttribute("user", exampleAzureUserService.findById(id).convertToDto());
-		return "edit";
+		return "thymeleaf/edit";
 	}
 
 	@Secured({ "ROLE_ANONYMOUS", "ANONYMOUS","ROLE_USER", "USER"})

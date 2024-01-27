@@ -24,11 +24,16 @@ public class EditJpaUserController {
 		this.exampleJpaUserService = exampleJpaUserService;
 	}
 
+	@GetMapping("/welcome")
+	public String welcome(Model model) {
+		return "jsp/welcome";
+	}
+
 	@GetMapping("/edit/{id}")
 	public String showEditForm(Model model, @PathVariable("id") Long id)
 			throws InvocationTargetException, IllegalAccessException {
 		model.addAttribute("user", exampleJpaUserService.findById(id).convertToDto());
-		return "edit";
+		return "thymeleaf/edit";
 	}
 
 	@PostMapping("/edit")

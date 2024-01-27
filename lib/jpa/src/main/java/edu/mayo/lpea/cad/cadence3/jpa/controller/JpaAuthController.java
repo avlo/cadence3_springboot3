@@ -28,7 +28,7 @@ public class JpaAuthController {
 	public String showRegistrationForm(Model model) {
 		AppUserDto user = new AppUserDto();
 		model.addAttribute("user", user);
-		return "register";
+		return "thymeleaf/register";
 	}
 
 	@PostMapping("/register")
