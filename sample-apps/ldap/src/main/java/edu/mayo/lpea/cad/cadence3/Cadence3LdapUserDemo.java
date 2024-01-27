@@ -1,18 +1,20 @@
 package edu.mayo.lpea.cad.cadence3;
 
-public class Cadence3LdapUserDemo {
-// commented out to not interfere with AZURE demo testing- if AZURE demo testing works but we'll still need a general solution such that any of the Demo Main classes do not need commenting
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+@SpringBootApplication
+public class Cadence3LdapUserDemo extends SpringBootServletInitializer {
+
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+    return application.sources(Cadence3LdapUserDemo.class);
+  }
+
+  public static void main(String[] args) {
+    SpringApplication.run(Cadence3LdapUserDemo.class, args);
+  }
 }
-//@SpringBootApplication
-//public class Cadence3LdapUserDemo extends SpringBootServletInitializer {
-//
-//  @Override
-//  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-//    return application.sources(Cadence3LdapUserDemo.class);
-//  }
-//
-//  public static void main(String[] args) {
-//    SpringApplication.run(Cadence3LdapUserDemo.class, args);
-//  }
-//}
-//
+
