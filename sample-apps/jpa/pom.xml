@@ -6,6 +6,7 @@
   <artifactId>jpa</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>sample-apps-jpa</name>
+<!--  <packaging>war</packaging>--> <!-- jpa temporarily commented out while attempting ldap -->
 
   <parent>
     <groupId>edu.mayo.lpea.cad.cadence3</groupId>
