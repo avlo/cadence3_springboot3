@@ -6,7 +6,7 @@
   <artifactId>ldap</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>sample-apps-ldap</name>
-  <packaging>war</packaging>
+<!--  <packaging>war</packaging>--> <!-- ldap temporarily commented out while attempting azure -->
 
   <parent>
     <groupId>edu.mayo.lpea.cad.cadence3</groupId>

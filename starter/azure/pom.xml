@@ -6,6 +6,7 @@
   <artifactId>azure</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>cadence3-azure-spring-boot-starter</name>
+  <packaging>jar</packaging>
 
   <parent>
     <groupId>edu.mayo.lpea.cad.cadence3</groupId>

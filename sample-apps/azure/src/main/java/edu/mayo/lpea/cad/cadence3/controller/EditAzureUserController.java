@@ -36,7 +36,7 @@ public class EditAzureUserController {
 	public String showEditForm(Model model, @PathVariable("id") Long id)
 			throws InvocationTargetException, IllegalAccessException {
 		model.addAttribute("user", exampleAzureUserService.findById(id).convertToDto());
-		return "edit";
+		return "thymeleaf/edit";
 	}
 
 	@Secured({ "ROLE_ANONYMOUS", "ANONYMOUS","ROLE_USER", "USER"})

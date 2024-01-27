@@ -6,6 +6,7 @@
   <artifactId>azure</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>sample-apps-azure</name>
+  <packaging>war</packaging>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
