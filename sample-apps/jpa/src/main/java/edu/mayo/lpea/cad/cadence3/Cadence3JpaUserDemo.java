@@ -1,7 +1,7 @@
 package edu.mayo.lpea.cad.cadence3;
 
 public class Cadence3JpaUserDemo {
-// commented out to not interfere with LDAP demo testing- and LDAP demo testing works but we'll still need a general solution such that any of the Demo Main classes do not need commenting
+// commented out to not interfere with LDAP demo testing- and LDAP demo testing works but we'll still need a general solution such that none of the Demo Main classes require commenting out
 }
 //@SpringBootApplication
 //public class Cadence3JpaUserDemo extends SpringBootServletInitializer {
