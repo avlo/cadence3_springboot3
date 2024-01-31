@@ -55,7 +55,6 @@ public class AzureSecurityConfig {
 		AadWebApplicationHttpSecurityConfigurer aadWebApplicationHttpSecurityConfigurer
 	) throws Exception {
 		LOGGER.info("Loading ADOauth2 - Endpoint authorization configuration");
-//		mvc.servletPath("/**");
 		http.apply(aadWebApplicationHttpSecurityConfigurer)
 			.and()
 			.authorizeHttpRequests(authorize -> authorize
@@ -65,7 +64,7 @@ public class AzureSecurityConfig {
 					.requestMatchers(mvc.pattern("/login/oauth2/code/aad/")).permitAll()
 					.requestMatchers(mvc.pattern("/aad")).permitAll()
 					.requestMatchers(mvc.pattern("/**")).permitAll()
-//						.access(azureUserLocalAuthorities)
+//						.access(azureUserLocalAuthorities)  <--- reintroduce
 			)
 			.oauth2Login(oauth2 -> oauth2
 				.userInfoEndpoint(userinfo -> userinfo

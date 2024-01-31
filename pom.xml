@@ -53,7 +53,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <snakeyaml.version>2.2</snakeyaml.version>
-    <spring-boot.version>3.2.1</spring-boot.version>
+    <spring-boot.version>3.2.2</spring-boot.version>
     <spring-ldap-core.version>3.2.1</spring-ldap-core.version>
     <spring-security-ldap.version>6.2.1</spring-security-ldap.version>
     <taglibs-standard-impl.version>1.2.5</taglibs-standard-impl.version>
