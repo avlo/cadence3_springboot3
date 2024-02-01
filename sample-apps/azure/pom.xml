@@ -11,11 +11,10 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.2.1</version>
+    <version>3.2.2</version>
   </parent>
 
   <properties>
-    <spring-boot.version>3.2.1</spring-boot.version>
     <cadence3-starter.version>0.0.1-SNAPSHOT</cadence3-starter.version>
   </properties>
 
@@ -62,7 +61,6 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>${spring-boot.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
