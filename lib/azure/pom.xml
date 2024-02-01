@@ -16,21 +16,6 @@
   <dependencies>
     <dependency>
       <groupId>edu.mayo.lpea.cad.cadence3.starter</groupId>
-      <artifactId>h2db</artifactId>
-      <version>${project.parent.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>edu.mayo.lpea.cad.cadence3.starter</groupId>
-      <artifactId>core</artifactId>
-      <version>${project.parent.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>edu.mayo.lpea.cad.cadence3.starter</groupId>
-      <artifactId>web</artifactId>
-      <version>${project.parent.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>edu.mayo.lpea.cad.cadence3.starter</groupId>
       <artifactId>jpa</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
@@ -41,14 +26,6 @@
     <dependency>
       <groupId>com.azure.spring</groupId>
       <artifactId>spring-cloud-azure-starter-active-directory</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>

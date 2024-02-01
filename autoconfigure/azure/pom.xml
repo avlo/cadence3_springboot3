@@ -30,21 +30,6 @@
     </dependency>
     <dependency>
       <groupId>edu.mayo.lpea.cad.cadence3.lib</groupId>
-      <artifactId>core</artifactId>
-      <version>${project.parent.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>edu.mayo.lpea.cad.cadence3.lib</groupId>
-      <artifactId>web</artifactId>
-      <version>${project.parent.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>edu.mayo.lpea.cad.cadence3.lib</groupId>
-      <artifactId>jpa</artifactId>
-      <version>${project.parent.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>edu.mayo.lpea.cad.cadence3.lib</groupId>
       <artifactId>azure</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
