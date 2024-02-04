@@ -28,64 +28,69 @@ import java.util.List;
 
 @Service
 public class AzureAuthUserServiceImpl extends OidcUserService implements AuthUserService {
-	private static final Logger LOGGER = LoggerFactory.getLogger(AzureAuthUserServiceImpl.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(AzureAuthUserServiceImpl.class);
 
-	private final CustomizableAppUserService customizableAppUserService;
-	private final AppUserAuthUserRepository appUserAuthUserRepository;
-	private final AuthUserDetailsService authUserDetailsService;
-	private final AppUserService appUserService;
+  private final CustomizableAppUserService customizableAppUserService;
+  private final AppUserAuthUserRepository appUserAuthUserRepository;
+  private final AuthUserDetailsService authUserDetailsService;
+  private final AppUserService appUserService;
 
-	@Autowired
-	public AzureAuthUserServiceImpl(
-			CustomizableAppUserService customizableAppUserService,
-			AuthUserDetailsService authUserDetailsService,
-			AppUserService appUserService,
-			AppUserAuthUserRepository appUserAuthUserRepository) {
-		LOGGER.info("ADOAUTH2 - Loading AzureAuthUserServiceImpl");
-		this.customizableAppUserService = customizableAppUserService;
-		this.authUserDetailsService = authUserDetailsService;
-		this.appUserService = appUserService;
-		this.appUserAuthUserRepository = appUserAuthUserRepository;
-	}
+  @Autowired
+  public AzureAuthUserServiceImpl(
+      CustomizableAppUserService customizableAppUserService,
+      AuthUserDetailsService authUserDetailsService,
+      AppUserService appUserService,
+      AppUserAuthUserRepository appUserAuthUserRepository) {
+    LOGGER.info("ADOAUTH2 - Loading AzureAuthUserServiceImpl");
+    this.customizableAppUserService = customizableAppUserService;
+    this.authUserDetailsService = authUserDetailsService;
+    this.appUserService = appUserService;
+    this.appUserAuthUserRepository = appUserAuthUserRepository;
+  }
 
-	@Override
-	public boolean userExists(String userName) {
-		return authUserDetailsService.userExists(userName);
-	}
+  @Override
+  public boolean userExists(String userName) {
+    return authUserDetailsService.userExists(userName);
+  }
 
-	@Transactional
-	@Override
-	public AppUserAuthUser createUser(@NonNull String username, @NonNull String password) throws PreExistingUserException {
-		if (userExists(username)) {
-			LOGGER.info("Pre-existing user [{}]", username);
-			throw new PreExistingUserException(MessageFormat.format("Pre-existing user [{0}]", username));
-		}
+  @Override
+  public AppUserAuthUser getAppuserAuthuser(String username) {
+    return appUserAuthUserRepository.getAppUserAuthUserByAuthUserName(username);
+  }
 
-		AuthUserDetails savedAuthUserDetails = authUserDetailsService.createAuthUser(username, password);
-		CustomizableAppUser<AppUser> appUser = appUserService.save(customizableAppUserService.createNewAppUser());
+  @Transactional
+  @Override
+  public AppUserAuthUser createUser(@NonNull String username, @NonNull String password) throws PreExistingUserException {
+    if (userExists(username)) {
+      LOGGER.info("Pre-existing user [{}]", username);
+      throw new PreExistingUserException(MessageFormat.format("Pre-existing user [{0}]", username));
+    }
 
-		AppUserAuthUser appUserAuthUser = new AppUserAuthUser(appUser.getId(), savedAuthUserDetails.getUsername());
-		return appUserAuthUserRepository.saveAndFlush(appUserAuthUser);
-	}
+    AuthUserDetails savedAuthUserDetails = authUserDetailsService.createAuthUser(username, password);
+    CustomizableAppUser<AppUser> appUser = appUserService.save(customizableAppUserService.createNewAppUser());
 
-	@Override
-	public List<AppUserAuthUser> getAllAppUsersMappedAuthUsers() {
-		return appUserAuthUserRepository.findAll();
-	}
+    AppUserAuthUser appUserAuthUser = new AppUserAuthUser(appUser.getId(), savedAuthUserDetails.getUsername());
+    return appUserAuthUserRepository.saveAndFlush(appUserAuthUser);
+  }
 
-	@Override
-	public Collection<GrantedAuthority> getGrantedAuthorities(@NonNull String username) {
-		return List.copyOf(authUserDetailsService.loadUserByUsername(username).getAuthorities());
-	}
+  @Override
+  public List<AppUserAuthUser> getAllAppUsersMappedAuthUsers() {
+    return appUserAuthUserRepository.findAll();
+  }
 
-	@Override
-	public OidcUser loadUser(OidcUserRequest userRequest) throws OAuth2AuthenticationException {
-		OidcUser oidcUser = super.loadUser(userRequest);
-		try {
-			createUser(oidcUser.getPreferredUsername(), "NO-OP");
-		} catch (PreExistingUserException e) {
-			LOGGER.info(e.getMessage());
-		}
-		return oidcUser;
-	}
+  @Override
+  public Collection<GrantedAuthority> getGrantedAuthorities(@NonNull String username) {
+    return List.copyOf(authUserDetailsService.loadUserByUsername(username).getAuthorities());
+  }
+
+  @Override
+  public OidcUser loadUser(OidcUserRequest userRequest) throws OAuth2AuthenticationException {
+    OidcUser oidcUser = super.loadUser(userRequest);
+    try {
+      createUser(oidcUser.getPreferredUsername(), "NO-OP");
+    } catch (PreExistingUserException e) {
+      LOGGER.info(e.getMessage());
+    }
+    return oidcUser;
+  }
 }

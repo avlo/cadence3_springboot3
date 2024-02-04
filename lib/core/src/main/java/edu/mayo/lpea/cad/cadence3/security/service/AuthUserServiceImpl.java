@@ -53,6 +53,11 @@ public class AuthUserServiceImpl implements AuthUserService {
   }
 
   @Override
+  public AppUserAuthUser getAppuserAuthuser(String username) {
+    return appUserAuthUserRepository.getAppUserAuthUserByAuthUserName(username);
+  }
+
+  @Override
   public List<AppUserAuthUser> getAllAppUsersMappedAuthUsers() {
     return appUserAuthUserRepository.findAll();
   }
