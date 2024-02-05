@@ -20,7 +20,7 @@ public class WebCommonConfig {
     return new MvcRequestMatcher.Builder(new HandlerMappingIntrospector());
   }
 
-  @Bean("authenticationSuccessHandler")
+  @Bean
   @ConditionalOnMissingBean
   public AuthenticationSuccessHandler authenticationSuccessHandler(){
     return new DefaultLoginHandler();
