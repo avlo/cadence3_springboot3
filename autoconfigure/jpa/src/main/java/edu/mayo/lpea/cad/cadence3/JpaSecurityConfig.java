@@ -29,7 +29,7 @@ public class JpaSecurityConfig {
 
   @Bean
   @DependsOn("mvc")
-	@ConditionalOnMissingFilterBean
+  @ConditionalOnMissingFilterBean
   public SecurityFilterChain filterChain(HttpSecurity http, MvcRequestMatcher.Builder mvc, AuthenticationSuccessHandler authenticationSuccessHandler) throws Exception {
     LOGGER.info("Loading JPA - Endpoint authorization configuration");
     http.authorizeHttpRequests(authorize -> authorize
